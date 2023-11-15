@@ -12,56 +12,117 @@
     --color-white: #fff;
 }
 
-.bg-img {
-    background-image: url(./images/fundo.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+header {
+    height: 60px;
+
 }
 
-.flex h2 {
-    color: var(--color-white);
-    text-align: center;
-    font-weight: bold;
-    font-size: 4em;
-    font-family: var(--font-title);
+.logo img {
+    width: 128px;
+    height: 128px;
 }
 
-.card {
-    margin-top: 25px;
-    width: 338px;
-    height: 540px;
-    background: black;
-    border: 1px solid white;
-    border-radius: 25px;
-    text-align: center;
+#check {
+    display: none;
 }
 
-.card img {
-    border-radius: 25px 25px 0px 0px;
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.5);
+
 }
 
-.card h3 {
-    margin-top: 15px;
-    color: var(--color-white);
-    font-family: var(--font-title);
-    font-weight: bold;
-    font-size: 2em;
+nav ul {
+    list-style: none;
+    background: var(--cor3);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 1s;
 }
 
-.card p {
-    text-align: left;
-    padding: 10px 30px 50px 30px;
-    font-family: var(--font-text);
-    color: var(--color-white);
+#check:checked~ul {
+    right: 0;
 }
 
-.card a {
-    padding: 10px 100px;
-    border: 0;
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid var(--cor1);
 }
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor2);
+}
+
+#fotografia,#galeria,#inicio,#portfolio,#sobre {
+    display: none;
+}
+
 
 @media(min-width: 1200px) {
+
+    .bg-img {
+        background-image: url(./images/fundo.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    .flex h2 {
+        color: var(--color-white);
+        text-align: center;
+        font-weight: bold;
+        font-size: 4em;
+        font-family: var(--font-title);
+    }
+    
+    .card {
+        margin-top: 25px;
+        width: 338px;
+        height: 540px;
+        background: black;
+        border: 1px solid white;
+        border-radius: 25px;
+        text-align: center;
+    }
+    
+    .card img {
+        border-radius: 25px 25px 0px 0px;
+    }
+    
+    .card h3 {
+        margin-top: 15px;
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        font-size: 2em;
+    }
+    
+    .card p {
+        text-align: left;
+        padding: 10px 30px 50px 30px;
+        font-family: var(--font-text);
+        color: var(--color-white);
+    }
+    
+    .card a {
+        padding: 10px 100px;
+        border: 0;
+    }
+
+    #check{
+        display:none;
+    }
+
+    label{
+        display:none;
+    }
 
 
     /*Pagina principal*/
@@ -408,11 +469,6 @@
         opacity: 0;
         /* Quando o mouse está sobre o botão, o texto desaparece */
     }
-
-
-
-
-
 }
 
 
