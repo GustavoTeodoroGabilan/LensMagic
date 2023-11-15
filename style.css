@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root {
+    --font-text: 'Lato', sans-serif;
+    --font-title: 'Raleway', sans-serif;
+    --color-white: #fff;
+}
+
+.bg-img {
+    background-image: url(./images/fundo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.flex h2 {
+    color: var(--color-white);
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+    font-family: var(--font-title);
+}
+
+.card {
+    margin-top: 25px;
+    width: 338px;
+    height: 540px;
+    background: black;
+    border: 1px solid white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    color: var(--color-white);
+    font-family: var(--font-title);
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.card p {
+    text-align: left;
+    padding: 10px 30px 50px 30px;
+    font-family: var(--font-text);
+    color: var(--color-white);
+}
+
+.card a {
+    padding: 10px 100px;
+    border: 0;
+}
+
+@media(min-width: 1200px) {
+
+
+    /*Pagina principal*/
+
+    .title-header {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        z-index: 1000;
+    }
+
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
+
+    nav img {
+        width: 100px;
+        height: auto;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-title);
+        color: var(--color-white);
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 40px;
+    }
+
+    nav ul li {
+        list-style: none;
+        font-family: var(--font-title);
+        text-transform: uppercase;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--color-white);
+        font-weight: bold;
+        font-family: var(--font-title);
+    }
+
+    nav ul li:hover {
+        transition: all .3s ease-in-out;
+        transform: scale(1.2);
+    }
+
+    nav ul li a:hover {
+        color: rgb(168, 155, 149);
+        transition: all .3s ease-in-out;
+    }
+
+    .principal {
+        height: 68vh;
+        padding: 0% 10%;
+    }
+
+    .title {
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 270px;
+        margin-left: 200px;
+        font-family: var(--font-title);
+        color: var(--color-white);
+        font-size: 2em;
+        animation: txt-aparecer 2s forwards;
+    }
+
+    .title p {
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
+
+    /*sessão Fotografia*/
+
+    .animation {
+        animation: aparecer 1s forwards;
+    }
+
+    .desaparecer {
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0;
+    }
+
+    .txt-all {
+        width: 25%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        color: var(--color-white);
+        font-family: var(--font-text);
+    }
+
+    .txt-all h2 {
+        font-size: 4em;
+        font-family: var(--font-title);
+        font-weight: bold;
+    }
+
+    .txt-all p {
+        font-family: var(--font-text);
+        word-spacing: 4px;
+    }
+
+    .img-fotografia {
+        width: 30%;
+        height: 70vh;
+    }
+
+    .img-fotografia img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .img-sobre {
+        width: 25%;
+        height: 70vh;
+    }
+
+
+    .img-sobre img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 100px;
+    }
+
+    .albun {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .albuns {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .btn-1 {
+        position: relative;
+        width: 30%;
+        height: 80%;
+        border-radius: 10px;
+    }
+
+    .btn-1::after {
+        content: "Arte da Simplicidade";
+        /* Adicione o texto ou conteúdo aqui */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5em;
+        z-index: 2;
+    }
+
+    .btn-1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./images/simplicidade.jpg);
+        /* Adicione sua imagem de fundo aqui */
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        filter: brightness(50%);
+        z-index: 1;
+        transition: .5s;
+    }
+
+
+
+    .btn-1:hover::before {
+        filter: brightness(100%);
+        transform: scale(1.1);
+        /* Quando o mouse está sobre o botão, o filtro é removido */
+    }
+
+    .btn-1:hover::after {
+        opacity: 0;
+        /* Quando o mouse está sobre o botão, o texto desaparece */
+    }
+
+    .btn-2 {
+        position: relative;
+        width: 30%;
+        height: 80%;
+        border-radius: 10px;
+    }
+
+    .btn-2::after {
+        content: "Arte da Simplicidade";
+        /* Adicione o texto ou conteúdo aqui */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5em;
+        z-index: 2;
+    }
+
+    .btn-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./images/historia.jpg);
+        /* Adicione sua imagem de fundo aqui */
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        filter: brightness(50%);
+        z-index: 1;
+        transition: .5s;
+    }
+
+
+
+    .btn-2:hover::before {
+        filter: brightness(100%);
+        transform: scale(1.1);
+        /* Quando o mouse está sobre o botão, o filtro é removido */
+    }
+
+    .btn-2:hover::after {
+        opacity: 0;
+        /* Quando o mouse está sobre o botão, o texto desaparece */
+    }
+
+    .btn-3 {
+        position: relative;
+        width: 30%;
+        height: 80%;
+        border-radius: 10px;
+    }
+
+    .btn-3::after {
+        content: "Arte da Simplicidade";
+        /* Adicione o texto ou conteúdo aqui */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5em;
+        z-index: 2;
+    }
+
+    .btn-3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./images/metropole.jpg);
+        /* Adicione sua imagem de fundo aqui */
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        filter: brightness(50%);
+        z-index: 1;
+        transition: .5s;
+    }
+
+
+
+    .btn-3:hover::before {
+        filter: brightness(100%);
+        transform: scale(1.1);
+        /* Quando o mouse está sobre o botão, o filtro é removido */
+    }
+
+    .btn-3:hover::after {
+        opacity: 0;
+        /* Quando o mouse está sobre o botão, o texto desaparece */
+    }
+
+
+
+
+
+}
+
+
+
+
+footer {
+    font-family: var(--font-text);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40%;
+    padding: 15px;
+    z-index: 1000;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: var(--color-white);
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social img {
+    margin-left: 20px;
+    width: 48px;
+    height: 48px;
+}
+
+
+/*Animações*/
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+@keyframes txt-aparecer {
+    from {
+        position: relative;
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    to {
+        position: relative;
+        bottom: 0;
+        opacity: 1;
+    }
+}
