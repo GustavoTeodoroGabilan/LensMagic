@@ -175,13 +175,18 @@ nav ul li a {
     display: none;
 }
 
+.flex{
+    width: 100%;
+    height: 80vh;
+}
+
 .cards {
     width: 100%;
     height: 80vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -198,15 +203,15 @@ nav ul li a {
     display: none
 }
 
-.card1 {
+.card {
     position: relative;
     border-radius: 10px;
-    width: 100%;
+    width: 40%;
     height: 30%;
 }
 
-.card1::after {
-    content: "Familiar";
+.card::after {
+    content: "Paisagem";
     /* Adicione o texto ou conteúdo aqui */
     position: absolute;
     top: 50%;
@@ -220,14 +225,14 @@ nav ul li a {
     z-index: 2;
 }
 
-.card1::before {
+.card::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(./images/familiar.jpg);
+    background: url(./images/paisagem.jpg);
     /* Adicione sua imagem de fundo aqui */
     background-position: center;
     background-size: cover;
@@ -240,12 +245,12 @@ nav ul li a {
 .card2 {
     position: relative;
     border-radius: 10px;
-    width: 100%;
+    width: 40%;
     height: 30%;
 }
 
 .card2::after {
-    content: "Familiar";
+    content: "Moda";
     /* Adicione o texto ou conteúdo aqui */
     position: absolute;
     top: 50%;
@@ -266,7 +271,7 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(./images/familiar.jpg);
+    background: url(./images/moda.jpg);
     /* Adicione sua imagem de fundo aqui */
     background-position: center;
     background-size: cover;
@@ -279,7 +284,7 @@ nav ul li a {
 .card3 {
     position: relative;
     border-radius: 10px;
-    width: 100%;
+    width: 40%;
     height: 30%;
 }
 
@@ -318,12 +323,13 @@ nav ul li a {
 .card4 {
     position: relative;
     border-radius: 10px;
-    width: 100%;
+    width: 40%;
     height: 30%;
+    background: url(./images/familiar.jpg);
 }
 
 .card4::after {
-    content: "Familiar";
+    content: "Alimentos";
     /* Adicione o texto ou conteúdo aqui */
     position: absolute;
     top: 50%;
@@ -344,7 +350,7 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(./images/familiar.jpg);
+    background: url(./images/alimento.jpg);
     /* Adicione sua imagem de fundo aqui */
     background-position: center;
     background-size: cover;
@@ -1108,6 +1114,7 @@ footer p {
         top: 0px;
         left: 0px;
         opacity: 0;
+        z-index: -1;
     }
 
     .txt-all {
@@ -1390,6 +1397,7 @@ footer p {
 @keyframes aparecer {
     0% {
         opacity: 0;
+        z-index: -1;
     }
 
     100% {
