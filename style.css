@@ -110,11 +110,6 @@ nav ul li a {
     font-family: var(--font-title);
     font-weight: bold;
 }
-
-#portfolio{
-    display:none;
-}
-
 .container{
     width: 100%;
     height: 100vh;
@@ -180,47 +175,183 @@ nav ul li a {
     display: none;
 }
 
+.cards {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
     margin-top: 25px;
-    width: 338px;
-    height: 520px;
-    background: var(--cor2);
-    border: 1px solid var(--cor3);
+    width: 40%;
+    height: 30%;
+    background: black;
+    border: 1px solid white;
     border-radius: 25px;
     text-align: center;
 }
 
-.card img {
-    border-radius: 25px 25px 0px 0px;
-    width: 100%;
-    height: 50%;
+.card img, .card h3, .card p{
+    display: none
 }
 
-.card h3 {
-    margin-top: 15px;
+.card1 {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+}
+
+.card1::after {
+    content: "Familiar";
+    /* Adicione o texto ou conteúdo aqui */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--color-white);
     font-family: var(--font-title);
     font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+    z-index: 2;
 }
 
-.card p {
-    text-align: left;
-    padding: 10px 30px 50px 30px;
-    font-family: var(--font-text);
+.card1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/familiar.jpg);
+    /* Adicione sua imagem de fundo aqui */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    filter: brightness(50%);
+    z-index: 1;
+    transition: .5s;
+}
+
+.card2 {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+}
+
+.card2::after {
+    content: "Familiar";
+    /* Adicione o texto ou conteúdo aqui */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--color-white);
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+    z-index: 2;
 }
 
-.card a {
-    padding: 10px 100px;
-    border: 0;
+.card2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/familiar.jpg);
+    /* Adicione sua imagem de fundo aqui */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    filter: brightness(50%);
+    z-index: 1;
+    transition: .5s;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 100px;
-    flex-wrap: wrap;
+.card3 {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+}
+
+.card3::after {
+    content: "Familiar";
+    /* Adicione o texto ou conteúdo aqui */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.card3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/familiar.jpg);
+    /* Adicione sua imagem de fundo aqui */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    filter: brightness(50%);
+    z-index: 1;
+    transition: .5s;
+}
+
+.card4 {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+}
+
+.card4::after {
+    content: "Familiar";
+    /* Adicione o texto ou conteúdo aqui */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.card4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/familiar.jpg);
+    /* Adicione sua imagem de fundo aqui */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    filter: brightness(50%);
+    z-index: 1;
+    transition: .5s;
 }
 
 .btn-1 {
@@ -408,15 +539,398 @@ footer p {
     height: 20px;
 }
 
+}
+
+@media (max-width: 1199px ) and (min-width: 768px) {
+
+    .bg-img {
+        background-image: url(./images/fundo.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            z-index: 1000;
+    }
+    
+    .logo{
+        display:flex;
+        align-items: center;
+    }
+    
+    .logo a{
+        text-decoration: none;
+        font-family: var(--font-title);
+        font-size: 1.5em;
+        color: var(--color-white);
+        font-weight: bold;
+    }
+    
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #check {
+        display: none;
+    }
+    
+    label {
+        font-size: 3em;
+        position: fixed;
+        top: 5px;
+        right: 15px;
+        color: #fff;
+    
+    }
+    
+    nav ul {
+        list-style: none;
+        background: black;
+        height: 100vh;
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        transition: all 1s;
+    }
+    
+    #check:checked~ul {
+        right: 0;
+    }
+    
+    nav ul li {
+        padding: 20px;
+        border-bottom: 1px solid white;
+    }
+    
+    nav ul li a {
+        font-family: var(--font-text);
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .principal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 80vh;
+    }
+    
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .title p, .title h1{
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+    }
+
+    .title p {
+        font-size: 2em;
+    }
+
+    .title h1{
+        font-size: 4em;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    .img-fotografia {
+        width: 30%;
+        height: 50vh;
+    }
+
+    .img-pc {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .img-celular{
+        display: none;
+    }
+
+        .txt-all {
+        width: 40%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        color: var(--color-white);
+        font-family: var(--font-text);
+    }
+
+    .txt-all h2 {
+        font-size: 4em;
+        font-family: var(--font-title);
+        font-weight: bold;
+    }
+
+    .txt-all p {
+        width: 100%;
+        font-family: var(--font-text);
+        word-spacing: 4px;
+    }
+
+    .img-sobre {
+        width: 30%;
+        height: 50vh;
+    }
+
+    .img-sobre-celular{
+        display:none;
+    }
 
 
+    .sobre-pc{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .btn-1 {
+        position: relative;
+        width: 30%;
+        height: 80%;
+        border-radius: 10px;
+    }
+    
+    .albun {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .albuns {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .btn-1 {
+        position: relative;
+        width: 90%;
+        height: 30%;
+        border-radius: 10px;
+    }
+    
+    .btn-1::after {
+        content: "Arte da Simplicidade";
+        /* Adicione o texto ou conteúdo aqui */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5em;
+        text-align: center;
+        z-index: 2;
+    }
+    
+    .btn-1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./images/simplicidade.jpg);
+        /* Adicione sua imagem de fundo aqui */
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        filter: brightness(50%);
+        z-index: 1;
+        transition: .5s;
+    }
+    
+    
+    
+    
+    .btn-2 {
+        position: relative;
+        width: 90%;
+        height: 30%;
+        border-radius: 10px;
+    }
+    
+    .btn-2::after {
+        content: "Traços de História";
+        /* Adicione o texto ou conteúdo aqui */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5em;
+        text-align: center;
+        z-index: 2;
+    }
+    
+    .btn-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./images/historia.jpg);
+        /* Adicione sua imagem de fundo aqui */
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        filter: brightness(50%);
+        z-index: 1;
+        transition: .5s;
+    }
+    
+    .btn-3 {
+        position: relative;
+        width: 90%;
+        height: 30%;
+        border-radius: 10px;
+    }
+    
+    .btn-3::after {
+        content: "Ritmo da Metrópole";
+        /* Adicione o texto ou conteúdo aqui */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5em;
+        z-index: 2;
+    }
+    
+    .btn-3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./images/metropole.jpg);
+        /* Adicione sua imagem de fundo aqui */
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        filter: brightness(50%);
+        z-index: 1;
+        transition: .5s;
+    }
+
+    footer {
+        font-family: var(--font-text);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10%;
+        padding: 15px;
+        z-index: 1000;
+    }
+    
+    footer p {
+        font-size:1.5em;
+        color: var(--color-white);
+    }
+    
+    .social {
+        display: flex;
+        align-items: center;
+    }
+    
+    .social img {
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 100px;
+    }
 
 
-
-
+    .card {
+        margin-top: 25px;
+        width: 30%;
+        height: 30vh;
+        background: black;
+        border: 1px solid white;
+        border-radius: 25px;
+        text-align: center;
+    }
+    
+    .card img {
+        border-radius: 25px 25px 0px 0px;
+        width: 100%;
+        height: 20vh;
+    }
+    
+    .card h3 {
+        margin-top: 15px;
+        color: var(--color-white);
+        font-family: var(--font-title);
+        font-weight: bold;
+        font-size: 2em;
+    }
 
 
 }
+
 
 @media(min-width: 1200px) {
 
@@ -437,8 +951,8 @@ footer p {
     
     .card {
         margin-top: 25px;
-        width: 338px;
-        height: 540px;
+        width: 20%;
+        height: 50%;
         background: black;
         border: 1px solid white;
         border-radius: 25px;
@@ -447,6 +961,8 @@ footer p {
     
     .card img {
         border-radius: 25px 25px 0px 0px;
+        width: 100%;
+        height: 40%;
     }
     
     .card h3 {
@@ -652,7 +1168,6 @@ footer p {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        gap: 100px;
     }
 
     .albun {
