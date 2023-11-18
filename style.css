@@ -1005,6 +1005,7 @@ footer p {
         padding: 10px 30px 50px 30px;
         font-family: var(--font-text);
         color: var(--color-white);
+        font-size: 1em;
     }
     
     .card a {
@@ -1371,6 +1372,7 @@ footer p {
         bottom: 0;
         left: 0;
         width: 100%;
+        height: auto;
         color: white;
         display: flex;
         align-items: center;
@@ -1392,8 +1394,8 @@ footer p {
     
     .social img {
         margin-left: 20px;
-        width: 48px;
-        height: 48px;
+        width: 38px;
+        height: 38px;
     }
 }
 
